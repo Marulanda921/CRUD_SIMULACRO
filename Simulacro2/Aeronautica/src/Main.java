@@ -1,5 +1,6 @@
 import Controller.AvionController;
 import Controller.PasajeroController;
+import Controller.ReservacionController;
 import Controller.VueloController;
 import Database.ConfigDB;
 
@@ -105,26 +106,26 @@ public class Main {
                 case 4:
                     do {
                         option2 = Integer.parseInt(JOptionPane.showInputDialog("""
-                    1. Listar Citas
-                    2. Crear Citas
-                    3. Eliminar Citas
-                    4. Actualizar Citas 
+                    1. Listar Reservaciones
+                    2. Crear Reservaciones
+                    3. Eliminar Reservaciones
+                    4. Actualizar Reservaciones
                     5. salir
                     
                     Ingresa una opcion: 
                                 """));
                         switch (option2) {
                             case 1:
-                                //CitaController.getAll();
+                                ReservacionController.getAll();
                                 break;
                             case 2:
-                                // CitaController.insert();
+                                ReservacionController.insert();
                                 break;
                             case 3:
-                                // CitaController.delete();
+                                ReservacionController.delete();
                                 break;
                             case 4:
-                                // CitaController.update();
+                                ReservacionController.update();
                                 break;
                         }
 

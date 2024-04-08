@@ -25,41 +25,77 @@ public class Reservacion {
         this.objVuelo = objVuelo;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getIdPasajero() {
+        return idPasajero;
     }
 
     public void setIdPasajero(int idPasajero) {
         this.idPasajero = idPasajero;
     }
 
+    public int getIdVuelo() {
+        return idVuelo;
+    }
+
     public void setIdVuelo(int idVuelo) {
         this.idVuelo = idVuelo;
+    }
+
+    public String getFechaReservacion() {
+        return fechaReservacion;
     }
 
     public void setFechaReservacion(String fechaReservacion) {
         this.fechaReservacion = fechaReservacion;
     }
 
+    public String getAsiento() {
+        return asiento;
+    }
+
     public void setAsiento(String asiento) {
         this.asiento = asiento;
+    }
+
+    public Pasajero getObjPasajero() {
+        return objPasajero;
     }
 
     public void setObjPasajero(Pasajero objPasajero) {
         this.objPasajero = objPasajero;
     }
 
+    public Vuelo getObjVuelo() {
+        return objVuelo;
+    }
+
     public void setObjVuelo(Vuelo objVuelo) {
         this.objVuelo = objVuelo;
     }
 
+
+
+    //ESTO ES IMPORTANTE PORQUE SI QUIERES UNIR 3 O MAS TABLAS TIENES QUE MOSTRAR TODOS LOS ELEMENTOS AQUI QUE QUIERES QUE VEA EL USUSARIO
+
     @Override
     public String toString() {
         return "Reservacion{" +
-                ", Pasajero=" + objPasajero.getNombre() +
-                ", Vuelo=" + objVuelo.getDestino() +
-                ", fechaReservacion='" + fechaReservacion + '\'' +
-                ", asiento='" + asiento + '\'' +
+                ", Fecha Reservacion=: " + fechaReservacion +
+                ", Asiento =" + asiento +
+                ", Nombre: =" + objPasajero.getNombre() +
+                ", Apellido ='" + objPasajero.getApellido() + '\'' +
+                ", Documento Identidad ='" + objPasajero.getDocumentoIdentidad() + '\'' +
+                ", Destino ='" + objVuelo.getDestino() + '\'' +
+                ", Fecha de salida ='" + objVuelo.getFecha_salida() + '\'' +
+                ", Hora de salida ='" + objVuelo.getHora_salida()+ '\'' +
                 '}';
     }
 }
